@@ -2,7 +2,9 @@ FROM ubuntu:xenial
 
 RUN apt-get update \
 	&& apt-get -y dist-upgrade \
-	&& apt-get -y install --no-install-recommends software-properties-common \
+	&& apt-get -y install --no-install-recommends \
+		software-properties-common \
+		tzdata \
 	&& apt-get clean
 
 RUN add-apt-repository ppa:team-xbmc/ppa \
